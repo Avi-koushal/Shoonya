@@ -98,6 +98,11 @@
   box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
   border: 0px solid rgb(229, 231, 235);
 }
+@media (min-width: 768px) {
+  .fordesk{
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .Banner {
     display: none;

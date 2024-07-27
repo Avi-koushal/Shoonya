@@ -23,9 +23,11 @@ function Home() {
             });
             const response = await fetch(`https://669f704cb132e2c136fdd9a0.mockapi.io/api/v1/retreats?${query.toString()}`);
             const data = await response.json();
-            setRetreats(data);
+            console.log('Fetched data:', data);
+            setRetreats(Array.isArray(data) ? data : []);
         } catch (error) {
             console.error('Error fetching the retreats:', error);
+            setRetreats([]); // Ensure retreats is an array in case of error
         }
     }
 
@@ -70,26 +72,26 @@ function Home() {
                     <p>Join us for a series of wellness retreats designed to help you find tranquility and rejuvenation.</p>
                 </div>
                 <div className='fordesk'>
-                            <select onChange={handleFilterDate} value={filterDate} style={{width:"100%",marginTop:"10px"}}>
-                                <option value="">Filter By Date</option>
-                                {uniqueDates.map((date, index) => (
-                                    <option key={index} value={date}>{date}</option>
-                                ))}
-                            </select>
-                            <select onChange={handleFilterType} value={filterType} style={{width:"100%",marginTop:"10px"}}>
-                                <option value="">Filter By Type</option>
-                                <option value="Signature">Signature</option>
-                                <option value="Standalone">Standalone</option>
-                            </select>
-                <div className='filterss'>
-                            <input
-                                placeholder='Search retreats by title'
-                                value={searchQuery}
-                                onChange={handleSearch}
-                                style={{width:"100%",marginTop:"10px"}}
-                            />
-                        </div>
+                    <select onChange={handleFilterDate} value={filterDate} style={{width:"100%",marginTop:"10px"}}>
+                        <option value="">Filter By Date</option>
+                        {uniqueDates.map((date, index) => (
+                            <option key={index} value={date}>{date}</option>
+                        ))}
+                    </select>
+                    <select onChange={handleFilterType} value={filterType} style={{width:"100%",marginTop:"10px"}}>
+                        <option value="">Filter By Type</option>
+                        <option value="Signature">Signature</option>
+                        <option value="Standalone">Standalone</option>
+                    </select>
+                    <div className='filterss'>
+                        <input
+                            placeholder='Search retreats by title'
+                            value={searchQuery}
+                            onChange={handleSearch}
+                            style={{width:"100%",marginTop:"10px"}}
+                        />
                     </div>
+                </div>
                 <div className='row formob'>
                     <div className='col-sm-12 col-6'>
                         <div className='filter'>
