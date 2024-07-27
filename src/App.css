@@ -1,38 +1,108 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  margin: 0%;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #1b3252;
+  border-bottom: 0px solid rgb(229, 231, 235);
+  box-shadow: rgba(3, 3, 3, 0.1) 2px 2px 4px;
+}
+.header p{
+  margin: 0%;
+  padding: 16px 20px;
+}
+.footer{
+  margin: 30px 0;
+  width: 100%;
+  text-align: center;
+}
+.Banner{
+  height: 428px;
+  opacity: 1;
+  padding: 20px;
+  margin: 25px 0px;
+  background-color: rgb(224, 217, 207);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  border: 0px solid rgb(229, 231, 235);
+}
+.bannerbox {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bannerbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the container */
+  object-position: center; /* This centers the image */
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+  border-radius: 6px;
+  border: 0px solid rgb(229, 231, 235);
+}
+.container{
+  padding: 10px;
+  background-color: rgb(224, 217, 207);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  border: 0px solid rgb(229, 231, 235);
+}
+.container img{
+  width: 200px;
+  height: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+  border-radius: 16px;
+  border: 0px solid rgb(229, 231, 235);
+}
+.Pagination{
+  text-align: center;
+}
+.Pagination button{
+  color: #fff;
+  background-color: rgb(27, 50, 82);
+  border-radius: 4px;
+  margin: 0px 5px;
+  padding: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+  border: 0px solid rgb(229, 231, 235);
+}
+.filter select{
+  color: #fff;
+  background-color: rgb(27, 50, 82);
+  border-radius: 4px;
+  margin: 0px 5px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+  border: 0px solid rgb(229, 231, 235);
+}
+.filters {
+  text-align: end;
+}
+.filters input::placeholder {
+    color: white;
+}
+.filters input{
+  color: #fff;
+  background-color: rgb(27, 50, 82);
+  border-radius: 4px;
+  margin: 0px 5px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+  border: 0px solid rgb(229, 231, 235);
+}
+@media (max-width: 768px) {
+  .Banner {
+    display: none;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .formob{
+    display: none;
   }
 }
